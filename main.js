@@ -38,4 +38,13 @@ function generatePersonalWisdom() {
         personalWisdom.push("There is not enought info.");
     }
   }
+  return personalWisdom;
 }
+
+function formatWisdom(wisdom) {
+  const formatted = wisdom.join("\n");
+  console.log(formatted);
+}
+
+const personalWisdom = generatePersonalWisdom();
+formatWisdom(personalWisdom);
