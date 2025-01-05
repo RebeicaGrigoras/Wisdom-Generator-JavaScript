@@ -23,5 +23,19 @@ function generatePersonalWisdom() {
     const options = collectiveWisdom[prop];
     const randomIndex = generateRandomNumber(options.length);
     const selectedOption = options[randomIndex];
+
+    switch (prop) {
+      case "signInfo":
+        personalWisdom.push(`Your sign right now is a ${selectedOption}.`);
+        break;
+      case "fortuneOutput":
+        personalWisdom.push(`You are having: ${selectedOption}.`);
+        break;
+      case "advice":
+        personalWisdom.push(`You should: ${selectedOption}.`);
+        break;
+      default:
+        personalWisdom.push("There is not enought info.");
+    }
   }
 }
