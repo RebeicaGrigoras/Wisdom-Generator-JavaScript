@@ -15,3 +15,13 @@ const collectiveWisdom = {
   ],
   advice: ["go out and eat", "not read this", "play more", "trust no one"],
 };
+
+function generatePersonalWisdom() {
+  const personalWisdom = [];
+
+  for (const prop in collectiveWisdom) {
+    const options = collectiveWisdom[prop];
+    const randomIndex = generateRandomNumber(options.length);
+    const selectedOption = options[randomIndex];
+  }
+}
